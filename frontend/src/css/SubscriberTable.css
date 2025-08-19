@@ -1,0 +1,12 @@
+.MuiDataGrid-columnHeader {
+  background-image: linear-gradient(90deg, #00b24f, #414141);
+  color: white;
+  font-weight: bold;
+}
+
+.custom-data-grid .MuiDataGrid-columnHeaderTitle {
+  color: rgb(32, 30, 30) !important;
+}
+.css-fis3z7-MuiTypography-root {
+  color: rgb(32, 30, 30) !important;
+}
