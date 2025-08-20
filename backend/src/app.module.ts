@@ -6,10 +6,13 @@ import { UsersModule } from './users/users.module';
 import { User } from './users/user.entity/user.entity';
 import { SubscriberModule } from './module/subscriber.module';
 import { Subscriber } from './auth/dto/subscriber.entity';
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
+      url: process.env.DATABASE_URL,
       host: 'localhost',
       port: 5432,
       username: 'postgres',
