@@ -41,7 +41,8 @@ export default function OrganizationsPage() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:4000/subscribers");
+        const API_URL = process.env.REACT_APP_API_URL;
+        const response = await axios.get(`${API_URL}/subscribers`);
         setRows(response.data);
       } catch (error) {
         console.error(error);
