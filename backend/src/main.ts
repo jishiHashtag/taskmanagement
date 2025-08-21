@@ -9,7 +9,9 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000', // local React dev
-      'https://taskmanagement-no94.onrender.com', // your deployed frontend
+      'https://taskmanagement-no94.onrender.com',
+      'https://taskproductivity.netlify.app',
+      'http://localhost:4200',
     ],
     credentials: true, // allow cookies/auth headers if needed
   });
