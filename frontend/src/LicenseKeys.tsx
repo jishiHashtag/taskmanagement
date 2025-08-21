@@ -47,7 +47,9 @@ export default function LicenseKeys() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/subscribers");
+        const API_URL = process.env.REACT_APP_API_URL;
+        const response = await axios.get(`${API_URL}/subscribers`);
+
         const dataWithStatus = response.data.map((key: LicenseKey) => ({
           ...key,
           status: getStatus(key.createdAt, key.validity),
