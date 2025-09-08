@@ -31,8 +31,9 @@ export default function Employees() {
       setLoading(true);
       setError(null);
       try {
+        const API_URL = process.env.REACT_APP_API_URL;
         const response = await axios.get(
-          `http://localhost:4000/subscribers/organisation/${organisation}`
+          `${API_URL}/subscribers/organisation/${organisation}`
         );
         setEmployees(response.data);
       } catch (err: any) {
