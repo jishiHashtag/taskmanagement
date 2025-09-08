@@ -54,7 +54,8 @@ export default function OrganizationsPage() {
   }, []);
 
   const handleCardClick = (organisation: string) => {
-    navigate(`/dashboard/employees/${organisation}`);
+    const API_URL = process.env.REACT_APP_API_URL;
+    window.location.href = `${API_URL}/subscribers/organisation/${organisation}`;
   };
   return (
     <Box sx={{ padding: 4 }}>
